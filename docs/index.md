@@ -3,7 +3,7 @@
 layout: home
 hero:
   name: "Howie's Blog"
-  text: "的博客"
+  text: "亦乎君的博客"
   tagline: 命由我作，福自己求
   image:
     src: /logo.jpg
@@ -23,12 +23,12 @@ hero:
 
 features:
   - icon: 📒
-    title: 代码全注释
-    details: Vue3,Vite5,TypeScript 和 Arco-Design，代码方法全部注释，方便理解、学习。
+    title: 待补充
+    details: 待补充
   - icon: ❄
-    title: 清晰的项目结构
-    details: 采用 pnpm，结构清晰优雅，易于维护。代码规范性极高。
+    title: 待补充
+    details: 待补充
   - icon: 🎉
-    title: 解疑问
-    details: 加群解答探讨开发遇到的各种问题，1群：建设中。
+    title: 待补充
+    details: 待补充
 ---
