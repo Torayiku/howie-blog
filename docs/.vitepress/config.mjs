@@ -30,41 +30,62 @@ export default defineConfig({
       }
     },
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' },
+      { text: '主页', link: '/' },
+      { text: '青苔札记', link: '/青苔札记' },
       {
-        text: 'Dropdown Menu',
-        items: [
-          { text: 'Item A', link: '/item-1' },
-          { text: 'Item B', link: '/item-2' },
-          { text: 'Item C', link: '/item-3' }
-        ]
-      }
-    ],
-
-    sidebar: [
-      {
-        text: '目录',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          {
-            text: 'Runtime API Examples',
-            link: '/api-examples',
-            // collapsed: true,
-            items: [
-              { text: 'Item A', link: '/item-1' },
-            ]
-          }
-        ]
+        text: '齿轮与玫瑰',
+        link: '/青苔札记'
+        // items: [
+        //   { text: 'Item A', link: '/item-1' },
+        //   { text: 'Item B', link: '/item-2' },
+        //   { text: 'Item C', link: '/item-3' }
+        // ]
       },
-      {
-        text: '目录2',
-        items: [
-          { text: '测试1', link: '/markdown-examples' },
-          { text: '天气', link: '/api-examples' }
-        ]
-      }
+      { text: '未知海图', link: '/青苔札记/娟的故事' },
     ],
+    sidebar: {
+      '/青苔札记/': [
+        {
+          text: '青苔札记',
+          items: [
+            { text: '2020.5.4 娟的故事', link: '/青苔札记/娟的故事' },
+            { text: '2021.5.6 由道德滑坡想到的', link: '青苔札记/2021.5.6由道德滑坡想到的' },
+            {
+              text: '2025年',
+              link: '/api-examples',
+              // collapsed: true,
+              items: [
+                { text: 'Item A', link: '/item-1' },
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    // sidebar: [
+    //   {
+    //     text: '青苔札记',
+    //     items: [
+    //       { text: '2020.5.4 娟的故事', link: '/青苔札记/娟的故事' },
+    //       { text: '2021.5.6 由道德滑坡想到的', link: '青苔札记/2021.5.6由道德滑坡想到的' },
+    //       {
+    //         text: 'Runtime API Examples',
+    //         link: '/api-examples',
+    //         // collapsed: true,
+    //         items: [
+    //           { text: 'Item A', link: '/item-1' },
+    //         ]
+    //       }
+    //     ]
+    //   },
+    //   {
+    //     text: '目录2',
+    //     items: [
+    //       { text: '测试1', link: '/markdown-examples' },
+    //       { text: '天气', link: '/api-examples' }
+    //     ]
+    //   }
+    // ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
