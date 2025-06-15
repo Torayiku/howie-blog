@@ -8,12 +8,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
-    "review": "vitepress preview docs"
+    "review": "vitepress preview docs",
+    "cms": "node node_modules/@huyikai/local-cms/cms.js docs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@huyikai/local-cms": "^0.0.27",
     "vitepress": "^1.6.3"
   }
 }

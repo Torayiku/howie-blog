@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /api-examples
+      link: /命运
     - theme: alt
       text: 在线预览
       target: _blank
