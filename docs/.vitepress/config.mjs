@@ -4,8 +4,10 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Howie's Blog",
   description: "A Blog of Howie",
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
+  ],
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     search: {
       provider: 'local',
       options: {
@@ -30,44 +32,57 @@ export default defineConfig({
       }
     },
     nav: [
-      { text: '主页', link: '/' },
-      { text: '青苔札记', link: '/青苔札记' },
-      {
-        text: '齿轮与玫瑰',
-        link: '/青苔札记'
-        // items: [
-        //   { text: 'Item A', link: '/item-1' },
-        //   { text: 'Item B', link: '/item-2' },
-        //   { text: 'Item C', link: '/item-3' }
-        // ]
-      },
-      { text: '未知海图', link: '/青苔札记/娟的故事' },
+      { text: 'HOME', link: '/' },
+      { text: 'ABOUT', link: '/AboutMe', activeMatch: '/AboutMe' },
+      { text: 'EPHEMERA CABINET', link: '/日常碎片/', activeMatch: '/日常碎片/' },
+      { text: 'FORGE NOTES', link: '/日常碎片/', activeMatch: '/日常碎片/' },
+      { text: 'WHISPERSING PAGES', link: '/日常碎片/', activeMatch: '/日常碎片/' },
+      // {
+      //   text: '齿轮与玫瑰',
+      //   link: '/日常碎片',
+      //   items: [
+      //     { text: 'Item A', link: '/item-1' },
+      //     { text: 'Item B', link: '/item-2' },
+      //     { text: 'Item C', link: '/item-3' }
+      //   ]
+      // },
     ],
     sidebar: {
-      '/青苔札记/': [
+      '/日常碎片/': [
         {
-          text: '青苔札记',
+          text: '2025年',
           items: [
-            { text: '2020.5.4 娟的故事', link: '/青苔札记/娟的故事' },
-            { text: '2021.5.6 由道德滑坡想到的', link: '青苔札记/2021.5.6由道德滑坡想到的' },
-            {
-              text: '2025年',
-              link: '/api-examples',
-              // collapsed: true,
-              items: [
-                { text: 'Item A', link: '/item-1' },
-              ]
-            }
-          ]
+            { text: '2021.5.6 由道德滑坡想到的', link: '日常碎片/2021.5.6由道德滑坡想到的' },
+            { text: '2020.5.4 娟的故事', link: '/日常碎片/娟的故事' },
+
+          ],
+          collapsed: false,
+        },
+        {
+          text: '2024年以前',
+          items: [
+            // {
+            //   text: '2025年',
+            //   link: '/api-examples',
+            //   // collapsed: true,
+            //   items: [
+            //     { text: 'Item A', link: '/item-1' },
+            //   ]
+            // },
+            { text: '2021.5.6 由道德滑坡想到的', link: '日常碎片/2021.5.6由道德滑坡想到的' },
+            { text: '2020.5.4 娟的故事', link: '/日常碎片/娟的故事' },
+
+          ],
+          collapsed: false,
         }
       ]
     },
     // sidebar: [
     //   {
-    //     text: '青苔札记',
+    //     text: '日常碎片',
     //     items: [
-    //       { text: '2020.5.4 娟的故事', link: '/青苔札记/娟的故事' },
-    //       { text: '2021.5.6 由道德滑坡想到的', link: '青苔札记/2021.5.6由道德滑坡想到的' },
+    //       { text: '2020.5.4 娟的故事', link: '/日常碎片/娟的故事' },
+    //       { text: '2021.5.6 由道德滑坡想到的', link: '日常碎片/2021.5.6由道德滑坡想到的' },
     //       {
     //         text: 'Runtime API Examples',
     //         link: '/api-examples',
@@ -88,12 +103,17 @@ export default defineConfig({
     // ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/Torayiku' },
+      // { icon: 'twitter', link: 'https://github.com/vuejs/vitepress' },
+      // { icon: 'wechat', link: 'https://github.com/vuejs/vitepress' },
+      // { icon: 'youtube', link: 'https://github.com/vuejs/vitepress' },
+      // { icon: 'facebook', link: 'https://github.com/vuejs/vitepress' },
+      // { icon: 'linkedin', link: 'https://github.com/vuejs/vitepress' },
     ],
-    footer: {
-      message: 'Released under the MIT License.测试',
-      copyright: 'Copyright © 2019-present Evan You'
-    },
+    // footer: {
+    //   message: 'Released under the MIT License.测试',
+    //   copyright: 'Copyright © 2019-present Evan You'
+    // },
     lastUpdated: true
     // aside: false
   },

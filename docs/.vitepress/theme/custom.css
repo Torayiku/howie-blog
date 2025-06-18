@@ -1,0 +1,103 @@
+/* :root {
+    --vp-home-hero-name-color: #2c3e50;
+    --vp-home-hero-text-color: #34495e;
+  }
+  
+  .vp-home-hero .name {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  .vp-home-hero .text {
+    font-size: 1.2rem;
+    color: var(--vp-home-hero-text-color);
+  }
+  
+  @media (max-width: 768px) {
+    .vp-home-hero .name {
+      font-size: 2rem;
+    }
+  
+    .vp-home-hero .text {
+      font-size: 1rem;
+    }
+  } */
+
+/* features 区域整体布局 */
+/* .VPFeatures.VPHomeFeatures .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+} */
+
+
+/* 美化卡片区域样式 */
+
+/* 卡片容器（每个 feature） */
+.VPFeatures.VPHomeFeatures .item.grid-3 a.VPLink {
+    text-decoration: none;
+    border: none;
+}
+
+/* 卡片样式（.box） */
+.VPFeatures.VPHomeFeatures .box {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eaeaea;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* hover 动画效果 */
+.VPFeatures.VPHomeFeatures .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 图标样式（圆形背景 + 居中） */
+.VPFeatures.VPHomeFeatures .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #f0f4ff;
+    color: #4680ea;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+/* .VPFeatures.VPHomeFeatures .VPImage {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #f0f4ff;
+    color: #4680ea;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+} */
+
+/* 标题样式 */
+.VPFeatures.VPHomeFeatures .title {
+    font-size: 1.25rem;
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+}
+
+/* 描述文字样式 */
+.VPFeatures.VPHomeFeatures .details {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    flex-grow: 1;
+}
