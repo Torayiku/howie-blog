@@ -17,5 +17,8 @@
   "devDependencies": {
     "@huyikai/local-cms": "^0.0.27",
     "vitepress": "^1.6.3"
+  },
+  "dependencies": {
+    "vitepress-auto-nav-sidebar": "^0.1.1"
   }
 }

@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  vitepress-auto-nav-sidebar:
+    specifier: ^0.1.1
+    version: 0.1.1
+
 devDependencies:
   '@huyikai/local-cms':
     specifier: ^0.0.27
@@ -191,6 +196,11 @@ packages:
     dependencies:
       '@babel/types': 7.27.6
     dev: true
+
+  /@babel/runtime@7.27.6:
+    resolution: {integrity: sha512-vbavdySgbTTrmFE+EsiqUTzlOr5bzlnJtUv9PynGCAKvfQqjIXbvFdumPM/GxMDfyuGMJaJAU6TO4zc1Jf1i8Q==}
+    engines: {node: '>=6.9.0'}
+    dev: false
 
   /@babel/types@7.27.6:
     resolution: {integrity: sha512-ETyHEk2VHHvl9b9jZP5IHPavHYk57EhanlRRuae9XCpb/j5bDCbPPMOBfCWhnl/7EDJz0jEMCi/RhccCE8r1+Q==}
@@ -2482,6 +2492,12 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
+
+  /vitepress-auto-nav-sidebar@0.1.1:
+    resolution: {integrity: sha512-T5dmzi1UG3gaJOPAZxXVbzr6p6iPw2wuuvEX/WWqSWp1bciOj+IPL4jgQen9LtXxKknqNdEe+tmxkKswx0Dm2w==}
+    dependencies:
+      '@babel/runtime': 7.27.6
+    dev: false
 
   /vitepress@1.6.3(@algolia/client-search@5.27.0)(search-insights@2.17.3):
     resolution: {integrity: sha512-fCkfdOk8yRZT8GD9BFqusW3+GggWYZ/rYncOfmgcDtP3ualNHCAg+Robxp2/6xfH1WwPHtGpPwv7mbA3qomtBw==}

@@ -1,6 +1,29 @@
 import { defineConfig } from 'vitepress'
+import AutoNavPlugin from 'vitepress-auto-nav-sidebar'
+// import { calculateSidebar } from '@nolebase/vitepress-plugin-sidebar'
 
-// https://vitepress.dev/reference/site-config
+const { nav, sidebar } = AutoNavPlugin({
+  ignoreFolders: ["node_modules", "assets", "public", ".vuepress", "code", ".obsidian", "utils"], // 需要排除的一些目录
+  ignoreFiles: ['个人简历'], // 需要排除的一些文件
+  dirPrefix: '目录：',
+  filePrefix: '文件：',
+  showNavIcon:false,
+  showSideIcon:true,
+  isCollapse: true,
+  collapsed: false,
+  singleLayerNav:true,
+  hiddenFilePrefix: '.'
+})
+// module.exports = {
+//   themeConfig: {
+//     nav,
+//     sidebar,
+//   },
+// };
+
+
+
+
 export default defineConfig({
   title: "Howie's Blog",
   description: "A Blog of Howie",
@@ -31,52 +54,54 @@ export default defineConfig({
         }
       }
     },
-    nav: [
-      { text: 'HOME', link: '/' },
-      { text: 'ABOUT', link: '/AboutMe', activeMatch: '/AboutMe' },
-      { text: 'EPHEMERA CABINET', link: '/日常碎片/', activeMatch: '/日常碎片/' },
-      { text: 'FORGE NOTES', link: '/日常碎片/', activeMatch: '/日常碎片/' },
-      { text: 'WHISPERSING PAGES', link: '/日常碎片/', activeMatch: '/日常碎片/' },
-      // {
-      //   text: '齿轮与玫瑰',
-      //   link: '/日常碎片',
-      //   items: [
-      //     { text: 'Item A', link: '/item-1' },
-      //     { text: 'Item B', link: '/item-2' },
-      //     { text: 'Item C', link: '/item-3' }
-      //   ]
-      // },
-    ],
-    sidebar: {
-      '/日常碎片/': [
-        {
-          text: '2025年',
-          items: [
-            { text: '2021.5.6 由道德滑坡想到的', link: '日常碎片/2021.5.6由道德滑坡想到的' },
-            { text: '2020.5.4 娟的故事', link: '/日常碎片/娟的故事' },
+    nav:nav,
+    sidebar:sidebar,
+    // nav: [
+    //   { text: 'HOME', link: '/' },
+    //   { text: 'ABOUT', link: '/AboutMe', activeMatch: '/AboutMe' },
+    //   { text: 'EPHEMERA CABINET', link: '/日常碎片/', activeMatch: '/日常碎片/' },
+    //   { text: 'FORGE NOTES', link: '/日常碎片/', activeMatch: '/日常碎片/' },
+    //   { text: 'WHISPERSING PAGES', link: '/日常碎片/', activeMatch: '/日常碎片/' },
+    //   // {
+    //   //   text: '齿轮与玫瑰',
+    //   //   link: '/日常碎片',
+    //   //   items: [
+    //   //     { text: 'Item A', link: '/item-1' },
+    //   //     { text: 'Item B', link: '/item-2' },
+    //   //     { text: 'Item C', link: '/item-3' }
+    //   //   ]
+    //   // },
+    // ],
+    // sidebar: {
+    //   '/日常碎片/': [
+    //     {
+    //       text: '2025年',
+    //       items: [
+    //         { text: '2021.5.6 由道德滑坡想到的', link: '日常碎片/2021.5.6由道德滑坡想到的' },
+    //         { text: '2020.5.4 娟的故事', link: '/日常碎片/娟的故事' },
 
-          ],
-          collapsed: false,
-        },
-        {
-          text: '2024年以前',
-          items: [
-            // {
-            //   text: '2025年',
-            //   link: '/api-examples',
-            //   // collapsed: true,
-            //   items: [
-            //     { text: 'Item A', link: '/item-1' },
-            //   ]
-            // },
-            { text: '2021.5.6 由道德滑坡想到的', link: '日常碎片/2021.5.6由道德滑坡想到的' },
-            { text: '2020.5.4 娟的故事', link: '/日常碎片/娟的故事' },
+    //       ],
+    //       collapsed: false,
+    //     },
+    //     {
+    //       text: '2024年以前',
+    //       items: [
+    //         // {
+    //         //   text: '2025年',
+    //         //   link: '/api-examples',
+    //         //   // collapsed: true,
+    //         //   items: [
+    //         //     { text: 'Item A', link: '/item-1' },
+    //         //   ]
+    //         // },
+    //         { text: '2021.5.6 由道德滑坡想到的', link: '日常碎片/2021.5.6由道德滑坡想到的' },
+    //         { text: '2020.5.4 娟的故事', link: '/日常碎片/娟的故事' },
 
-          ],
-          collapsed: false,
-        }
-      ]
-    },
+    //       ],
+    //       collapsed: false,
+    //     }
+    //   ]
+    // },
     // sidebar: [
     //   {
     //     text: '日常碎片',
